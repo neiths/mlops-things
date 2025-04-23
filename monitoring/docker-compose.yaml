@@ -38,4 +38,4 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./config/grafana_datasources.yaml: /etc/grafana/provisioning/datasources/datasource.yaml:ro
+      - ./config/grafana_datasources.yaml:/etc/grafana/provisioning/datasources/datasource.yaml:ro
