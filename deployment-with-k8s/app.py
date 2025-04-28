@@ -1,13 +1,13 @@
 import uvicorn
-from fastapi import FastAPI, Query
+from fastapi import FastAPI, Query, Path
 import joblib
 import numpy as np
 import pandas as pd
 import requests
 
+vectorizer = joblib.load("deployment-with-k8s/model/count_vectorizer.pkl")
 
-nationality_native_bayes = open("deployment-with-k8s/model/naive_bayes.pkl", "rb")
-nationality_native_cv = joblib.load(nationality_native_bayes)
+model = joblib.load("deployment-with-k8s/model/naive_bayes.pkl")
 
 app = FastAPI()
 
@@ -16,13 +16,12 @@ async def index():
     return {"text": "our first route"}
 
 @app.get('/predict/{name}')
-async def predict(name: str = Query(None, min_length=2, max_length=12)):
-  if requests.method == 'GET':
-    namequery = requests.form['namequery']
-    data = [namequery]
-    vect = nationality_native_cv.transform(data).toarray()
-    result = nationality_native_cv.predict(vect)
-    return {"orig_name": name, "prediction": result}
+async def predict(name: str = Path(...)):
+
+    vect = vectorizer.transform([name]).toarray()
+    result = model.predict(vect)
+
+    return {"orig_name": name, "prediction": result[0]}
 
 
 if __name__ == '__main__':
