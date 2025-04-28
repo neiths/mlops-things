@@ -1,13 +1,10 @@
 import uvicorn
 from fastapi import FastAPI, Query, Path
 import joblib
-import numpy as np
-import pandas as pd
-import requests
 
-vectorizer = joblib.load("deployment-with-k8s/model/count_vectorizer.pkl")
+vectorizer = joblib.load("model/count_vectorizer.pkl")
 
-model = joblib.load("deployment-with-k8s/model/naive_bayes.pkl")
+model = joblib.load("model/naive_bayes.pkl")
 
 app = FastAPI()
 
