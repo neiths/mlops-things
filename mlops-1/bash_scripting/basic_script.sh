@@ -66,3 +66,18 @@ echo "replaced all the element 'home': ${my_path//home/house}"
 echo "split my_path by / into an array:"
 
 IFS="/" read -ra my_array <<< $my_path && echo ${my_array[@]} && echo "last element: ${my_array[-1]}"
+
+
+echo "delete everything up to the last slash: ${my_path##*/}"
+
+echo "lower case: ${my_path,,}; Upper case: ${my_path^^}"
+
+my_array=(10 2 300)
+
+echo "all the elements: ${my_array[@]}"
+
+echo "First element: ${my_array[0]}"
+
+echo "Last element: ${my_array[-1]}"
+
+echo "Number of elements: ${#my_array[@]}"
