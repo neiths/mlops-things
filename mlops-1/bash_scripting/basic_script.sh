@@ -61,6 +61,7 @@ my_path="/home/thien/home/mnt/linux"
 
 echo "replaced the first 'home': ${my_path/home/house}"
 
+echo "replaced all the element 'home': ${my_path//home/house}"
 
 echo "split my_path by / into an array:"
 
