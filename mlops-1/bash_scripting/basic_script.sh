@@ -14,3 +14,10 @@ elif [[ $first_arg == 0 ]]; then
 else
 	echo "First argument is negative"
 fi
+
+# print all numbers from 0 to first_arg-1
+echo "all numbers from 0 to first_arg-1:"
+for ((i=0;i<first_arg;i++)); do
+	echo $i
+done
+
