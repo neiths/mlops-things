@@ -81,3 +81,10 @@ echo "First element: ${my_array[0]}"
 echo "Last element: ${my_array[-1]}"
 
 echo "Number of elements: ${#my_array[@]}"
+
+cat << EOF >> test.txt
+machine learing machine learning data engineer
+data scientist
+EOF
+
+echo "successfully wrote filte"
