@@ -21,3 +21,15 @@ for ((i=0;i<first_arg;i++)); do
 	echo $i
 done
 
+# demo a function
+file_path="data/data1.csv"
+my_readfile_func() {
+	while read -r line; do
+		# use internal Field separator (IFS) to split string,
+		# then read the raw input (-r) and create a new array (-a) my_record
+		IFS=',' read -ra my_record <<< "$line"
+		echo ${my_record[-1]}
+	done < $1
+}
+
+my_readfile_func $file_path
