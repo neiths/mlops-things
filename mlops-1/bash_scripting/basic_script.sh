@@ -32,6 +32,8 @@ my_readfile_func() {
 	done < $1
 }
 
+my_readfile_func $file_path
+
 # foor loop to look up .sh files
 echo "all the .sh files in the current directory:"
 for i in ./*sh; do
@@ -45,4 +47,21 @@ else
 	echo "Non-positive number"
 fi
 
-my_readfile_func $file_path
+# don't use [[ 10 > 9 ]], but use
+# (( 10 > 9 )) for numerical operations
+
+if [[ 10 > 9 ]]; then
+	echo "10 > 9 is true"
+else
+	echo "10 > 9 is false"
+fi
+
+# replace string
+my_path="/home/thien/home/mnt/linux"
+
+echo "replaced the first 'home': ${my_path/home/house}"
+
+
+echo "split my_path by / into an array:"
+
+IFS="/" read -ra my_array <<< $my_path && echo ${my_array[@]} && echo "last element: ${my_array[-1]}"
