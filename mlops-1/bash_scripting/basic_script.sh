@@ -32,4 +32,17 @@ my_readfile_func() {
 	done < $1
 }
 
+# foor loop to look up .sh files
+echo "all the .sh files in the current directory:"
+for i in ./*sh; do
+	echo $i
+done
+
+# positive and negative number
+if (( first_arg > 0 )); then
+	echo "Positive number"
+else
+	echo "Non-positive number"
+fi
+
 my_readfile_func $file_path
