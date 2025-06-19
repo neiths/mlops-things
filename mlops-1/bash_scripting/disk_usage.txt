@@ -1,0 +1,26 @@
+Filesystem      Size  Used Avail Use% Mounted on
+none            3.9G     0  3.9G   0% /usr/lib/modules/6.6.87.2-microsoft-standard-WSL2
+none            3.9G  4.0K  3.9G   1% /mnt/wsl
+drivers         238G  214G   25G  90% /usr/lib/wsl/drivers
+/dev/sdd       1007G  5.8G  950G   1% /
+none            3.9G   88K  3.9G   1% /mnt/wslg
+none            3.9G     0  3.9G   0% /usr/lib/wsl/lib
+rootfs          3.9G  2.7M  3.9G   1% /init
+none            3.9G  848K  3.9G   1% /run
+none            3.9G     0  3.9G   0% /run/lock
+none            3.9G     0  3.9G   0% /run/shm
+none            3.9G   76K  3.9G   1% /mnt/wslg/versions.txt
+none            3.9G   76K  3.9G   1% /mnt/wslg/doc
+C:\             238G  214G   25G  90% /mnt/c
+snapfuse        319M  319M     0 100% /snap/code/194
+snapfuse         64M   64M     0 100% /snap/core20/2582
+snapfuse        323M  323M     0 100% /snap/code/196
+snapfuse         74M   74M     0 100% /snap/core22/2010
+snapfuse         64M   64M     0 100% /snap/core20/2599
+snapfuse         74M   74M     0 100% /snap/core22/1981
+snapfuse         45M   45M     0 100% /snap/snapd/23771
+snapfuse        4.5M  4.5M     0 100% /snap/tree/54
+snapfuse         51M   51M     0 100% /snap/snapd/24505
+tmpfs           3.9G   16K  3.9G   1% /run/user/1000
+snapfuse         67M   67M     0 100% /snap/core24/988
+snapfuse         11M   11M     0 100% /snap/htop/5021

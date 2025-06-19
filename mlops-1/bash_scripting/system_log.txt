@@ -1,0 +1,4 @@
+[2025-06-19 17:46:53] Kiểm tra hệ thống
+Hostname: DESKTOP-CSFD48U
+Disk usage: 1%
+CPU usage: 99.4%
